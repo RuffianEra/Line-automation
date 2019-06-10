@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact name="FriendHomePage_Main">
+    <output-path>$PROJECT_DIR$/out/artifacts/FriendHomePage_Main</output-path>
+    <root id="root">
+      <element id="archive" name="Line-automation.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="Line-automation" />
+      </element>
+      <element id="directory" name="libs">
+        <element id="library" level="project" name="Maven: net.java.dev.jna:jna:5.3.0" />
+        <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+        <element id="library" level="project" name="Maven: net.java.dev.jna:jna-platform:5.3.0" />
+      </element>
+    </root>
+  </artifact>
+</component>
