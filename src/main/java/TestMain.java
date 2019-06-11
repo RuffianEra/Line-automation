@@ -1,10 +1,11 @@
 import com.LineAssistant.ControlFlow.CommonalityMethod;
 import com.LineAssistant.ControlFlow.FriendHomePage;
-import com.LineAssistant.Main;
+import com.LineAssistant.ParamStatic;
 import com.LineAssistant.PictureDispose.PictureFind;
 import java.awt.*;
-import java.io.IOException;
+import java.io.FileInputStream;
 import java.util.List;
+import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -14,9 +15,11 @@ public class TestMain {
     private static final String INPUT =
             "cat cat cat cattie cat";
 
-    public static void main( String args[] ){
-        /*Pattern pat = Pattern.compile("^\\w+");
-        Matcher m = pat.matcher("目前正在回复第7个好友的朋友圈，已经回复了3条说说");*/CommonalityMethod.circulationFriendList(new FriendHomePage());
+    /** 添加配置文件 */
+    public static Properties prop = new Properties();
+
+    public static void main( String args[] ) throws Exception{
+        System.out.println(System.getProperty("os.name"));
     }
 
     public static void t2(){
@@ -32,13 +35,5 @@ public class TestMain {
             System.out.println("end(): "+m.end());
             System.out.println("group(): "+m.group());
         }
-    }
-
-    public static void t1(){
-        FriendHomePage method = new FriendHomePage();
-
-        List<Point> list =  PictureFind.getResult(Main.url + "\\numberList.png");
-        if( list.size() == 1 ) { CommonalityMethod.initFriend_2(method); }
-        else if( list.size() == 2 ) { CommonalityMethod.initFriend_3(method); }
     }
 }

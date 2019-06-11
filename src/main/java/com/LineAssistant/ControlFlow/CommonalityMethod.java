@@ -1,7 +1,6 @@
 package com.LineAssistant.ControlFlow;
-import com.GUI.Chart;
 import com.LineAssistant.KeyboardDispose.KeyboardDispose;
-import com.LineAssistant.Main;
+import com.LineAssistant.ParamStatic;
 import com.LineAssistant.MouseDispose.MouseDispose;
 import com.LineAssistant.PictureDispose.PictureFind;
 import com.sun.jna.platform.win32.User32;
@@ -17,7 +16,7 @@ import java.util.regex.Pattern;
 
 public interface CommonalityMethod {
     /** 直接设置第一个好友图标中心点 */
-    Point oneFriend = new Point(84, 118);
+    Point oneFriend = new Point(84, 115);
 
     /** 接口方法，方法中转 */
     void callMain();
@@ -28,42 +27,41 @@ public interface CommonalityMethod {
      *  2.复制需要评论的数据
      */
     static void initCopy() {
-        listInit();
         WinDef.HWND hwnd = User32.INSTANCE.FindWindow(null, "line");
         WinDef.RECT lineRect = new WinDef.RECT();
         User32.INSTANCE.GetWindowRect(hwnd, lineRect);
         User32.INSTANCE.MoveWindow(hwnd, 0, 0, 472, 712, true);
-
-        System.out.println(Chart.textArea.getText());
-        Main.clip.setContents(new StringSelection(Chart.textArea.getText()), null);
     }
 
     /**
-     *  Line登陆
-     * @param user  帐号
-     * @param password  密码
+     *  打开Line软件
      */
-    static void login(String user, String password){
-        List<Point> list = PictureFind.getResult(Main.url + "\\open.png");
+    static void openLine(){
+        List<Point> list = PictureFind.getResult(ParamStatic.url + "\\open.png");
         System.out.println(list.size());
 
         /** 鼠标移动到line程序上并运行 */
         int x = list.get(0).x;
         int y = list.get(0).y;
-        Main.robot.mouseMove(x, y);
+        ParamStatic.robot.mouseMove(x, y);
         MouseDispose.leftDoublicClick();
+    }
 
-        CommonalityMethod.sleep(2000);
+    /**
+     *  Line登陆
+     * @param key_value  key_value[0] 帐号    key_value[1] 密码
+     */
+    static void login(String[] key_value){
         /** 获取登录的位置 */
-        list = PictureFind.getResult(Main.url + "\\login.png");
+        List<Point> list = PictureFind.getResult(ParamStatic.url + "\\login.png");
         /** 鼠标移动到邮箱地址栏并触发单击事件 */
-        x = list.get(0).x;
-        y = list.get(0).y - 72;
-        Main.robot.mouseMove(x, y);
+        int x = list.get(0).x;
+        int y = list.get(0).y - 72;
+        ParamStatic.robot.mouseMove(x, y);
         MouseDispose.leftClick();
 
         /** 把帐号复制到剪切板中 */
-        Main.clip.setContents(new StringSelection(user), null);
+        ParamStatic.clip.setContents(new StringSelection(key_value[0]), null);
 
         /** 对当前输入框中的数据进行全选删除 */
         KeyboardDispose.delectData();
@@ -73,11 +71,11 @@ public interface CommonalityMethod {
 
         /** 鼠标移动到密码地址栏并触发单击事件 */
         y = list.get(0).y - 36;
-        Main.robot.mouseMove(x, y);
+        ParamStatic.robot.mouseMove(x, y);
         MouseDispose.leftClick();
 
         /** 把密码复制到剪切板中 */
-        Main.clip.setContents(new StringSelection(password), null);
+        ParamStatic.clip.setContents(new StringSelection(key_value[1]), null);
 
         /** 对当前输入框中的数据进行全选删除 */
         KeyboardDispose.delectData();
@@ -87,7 +85,7 @@ public interface CommonalityMethod {
 
         /** 鼠标移动到登陆按钮并触发单击事件 */
         y = list.get(0).y;
-        Main.robot.mouseMove(x, y);
+        ParamStatic.robot.mouseMove(x, y);
         MouseDispose.leftClick();
     }
 
@@ -95,22 +93,22 @@ public interface CommonalityMethod {
      * Line登陆成功后先关闭所有列表，然后再单独把好友列表打开
      */
     static void listInit() {
-        List<Point> newF = PictureFind.getResult(Main.url + "\\newFriend.png");
+        List<Point> newF = PictureFind.getResult(ParamStatic.url + "\\newFriend.png");
         if( newF.size() > 0 ){
-            Main.robot.mouseMove(newF.get(0).x, newF.get(0).y);
+            ParamStatic.robot.mouseMove(newF.get(0).x, newF.get(0).y);
             MouseDispose.leftClick();
             listInit();
         }
 
-        List<Point> list = PictureFind.getResult(Main.url + "\\close.png");
+        List<Point> list = PictureFind.getResult(ParamStatic.url + "\\close.png");
         if(list.size() > 0 ){
-            Main.robot.mouseMove(list.get(0).x, list.get(0).y);
+            ParamStatic.robot.mouseMove(list.get(0).x, list.get(0).y);
             MouseDispose.leftClick();
             listInit();
         }
         else {
-            List<Point> lists = PictureFind.getResult(Main.url + "\\openFriend.png");
-            Main.robot.mouseMove(lists.get(0).x, lists.get(0).y);
+            List<Point> lists = PictureFind.getResult(ParamStatic.url + "\\openFriend.png");
+            ParamStatic.robot.mouseMove(lists.get(0).x, lists.get(0).y);
             MouseDispose.leftClick();
         }
     }
@@ -137,7 +135,7 @@ public interface CommonalityMethod {
         WinDef.HWND hwnd = User32.INSTANCE.FindWindowEx(null, null, "Qt5QWindowIcon", null);
         WinDef.RECT rect = new WinDef.RECT();
         User32.INSTANCE.GetWindowRect(hwnd, rect);
-        Main.robot.mouseMove((rect.right - rect.left)/2 + rect.left, rect.bottom/2);
+        ParamStatic.robot.mouseMove((rect.right - rect.left)/2 + rect.left, rect.bottom/2);
 
         char[] by = new char[100];
         User32.INSTANCE.GetWindowText(hwnd, by, 1024);
@@ -173,66 +171,14 @@ public interface CommonalityMethod {
         }
         else {
             if( next >= 5){ return null;}
-            Main.robot.mouseWheel(quantity);
+            ParamStatic.robot.mouseWheel(quantity);
             CommonalityMethod.sleep(500);
             return isExist(url, quantity, ++next);
         }
     }
 
 
-    /**
-     *  循环好友列表
-     * @param method  多态，根据对象调用对应方法
-     */
-    static void circulationFriendList(CommonalityMethod method) {
-        List<Point> list =  PictureFind.getResult(Main.url + "\\numberList.png");
-        if( list.size() == 1 ) { initFriend_2(method); }
-        else if( list.size() == 2 ) { initFriend_3(method); }
 
-        /** 为轮循好友列表第滚动一次就添加一次快照，用来判断好友列表是否轮循结束 */
-        List<BufferedImage> images = new ArrayList<>();
-
-        /** 为好友列表添加第一次快照 */
-        images.add(Main.robot.createScreenCapture(new Rectangle(55,123, 472, 712)));
-
-        while ( true ) {
-
-            /** 每14个好友一次轮循 */
-            for(int y = 0; y < 14; y++) {
-                if(y == 13) { break; }
-                CommonalityMethod.sleep(500);
-                Main.robot.mouseMove(oneFriend.x, oneFriend.y + y/3*10 + y%3*54);
-                CommonalityMethod.sleep(500);
-
-                /** 每3个好友滚动一次 */
-                if(0 == y%3 && y != 0) {
-                    images.add(Main.robot.createScreenCapture(new Rectangle(55,123, 472, 712)));
-                    /** 判断好友列表最后一张快照和倒数第二张快照是否全等，如果全等代表好友列表轮循到最后，不能滚动 */
-                    if(PictureFind.isImageCompare(images.get(images.size()-1), images.get(images.size()-2))){
-                        System.out.println("正式退出好友列表循环！！！");
-                        behindFriend(method, oneFriend.x, oneFriend.y + y/3*10 + 3*54);
-                        return;
-                    }
-
-                    Main.robot.mouseWheel(1);
-                    CommonalityMethod.sleep(500);
-                }
-                MouseDispose.leftClick();
-
-                while(true){
-                    if(openFriendHomePage(method)){
-                        break;
-                    }
-                    else {
-                        Point point = MouseInfo.getPointerInfo().getLocation();
-                        oneFriend.y += 30;
-                        Main.robot.mouseMove(point.x, point.y + y/3*10 + 30);
-                        MouseDispose.leftClick();
-                    }
-                }
-            }
-        }
-    }
 
     /**
      *  进入好友主页并回复信息
@@ -241,68 +187,65 @@ public interface CommonalityMethod {
      * @throws Exception
      */
     static boolean openFriendHomePage(CommonalityMethod method) {
-        List<Point> coordinates = PictureFind.getResult(Main.url + "\\homepage1.png");
+        /*List<Point> coordinates = PictureFind.getResult(ParamStatic.url + "\\homepage1.png");
         if(coordinates.size() != 1) {
-            coordinates = PictureFind.getResult(Main.url + "\\homepage2.png");
+            coordinates = PictureFind.getResult(ParamStatic.url + "\\homepage2.png");
         }
         if(coordinates.size() != 1) {
-            coordinates = PictureFind.getResult(Main.url + "\\homepage3.png");
+            coordinates = PictureFind.getResult(ParamStatic.url + "\\homepage3.png");
         }
         if(coordinates.size() != 1) {
-            coordinates = PictureFind.getResult(Main.url + "\\homepage4.png");
+            coordinates = PictureFind.getResult(ParamStatic.url + "\\homepage4.png");
         }
         if(coordinates.size() == 0) {
             return false;
         }
         else if(coordinates.size() == 1){
-            Main.robot.mouseMove(coordinates.get(0).x, coordinates.get(0).y);
+            ParamStatic.robot.mouseMove(coordinates.get(0).x, coordinates.get(0).y);
             MouseDispose.leftClick();
+
+            WinDef.HWND hwnd = User32.INSTANCE.FindWindowEx(null, null, "Qt5QWindowIcon", null);
+            char[] ar = new char[50];
+            User32.INSTANCE.GetWindowText(hwnd, ar, 50);
+            System.out.println(new String(ar) + "___________"  +  ++ParamStatic.sumFriend);
+
             CommonalityMethod.sleep(500);
 
-            FriendControlFlow.sumFriend++;
+            ParamStatic.friendName = CommonalityMethod.mouseMove();
 
-            Main.logger.info("目前正在回复" + Chart.user + "第" + FriendControlFlow.sumFriend + "个好友的朋友圈，已经回复了" + FriendControlFlow.sum  + "条说说");
+            ParamStatic.logger.info("目前正在回复" + Chart.user + "第" + ++ParamStatic.sumFriend + "个好友的朋友圈，已经回复了" + ParamStatic.sum  + "条说说");
 
-            if(PictureFind.getResult(Main.url + "\\blank.png").size() == 1 || PictureFind.getResult(Main.url + "\\delect.png").size() == 1){
-                Main.logger.info("--------------------------------------好友空白主页，自动跳过！--------------------------------------");
+            if(PictureFind.getResult(ParamStatic.url + "\\blank.png").size() == 1 || PictureFind.getResult(ParamStatic.url + "\\delect.png").size() == 1){
+                ParamStatic.logger.info("--------------------------------------好友空白主页，自动跳过！--------------------------------------");
                 KeyboardDispose.esc(); return true;
             }
 
-            /** 进入好友主页中心点并记录当前好友的名称 */
-            FriendControlFlow.friendName = CommonalityMethod.mouseMove();
-
+            *//** 进入好友主页中心点 *//*
             method.callMain();
 
             KeyboardDispose.esc();
-        }
+        }*/
         return true;
     }
 
+
     /**
+     *
      * 循环好友列表前对列表进行通一格式调配(当只有两种列表时)
      * @param method  多态，根据对象调用对应方法
-     * @param method
+     * @param x 鼠标x坐标
+     * @param y 鼠标y坐标
+     * @param next  循环列表前先访问好友的个数
+     * @param wheel 鼠标滚动轴滚动次数
      */
-    static void initFriend_2(CommonalityMethod method){
-        for(int x = 0; x < 5; x++){
-            Main.robot.mouseMove(85, 150 + 54 * x);
+    static void initFriend(CommonalityMethod method, int x, int y, int next, int wheel){
+        for(int n = 0; x < next; n++){
+            ParamStatic.robot.mouseMove(x, y + 54 * n);
             MouseDispose.leftClick();
-            openFriendHomePage(method);
-            System.out.println(MouseInfo.getPointerInfo().getLocation().x + "----------" + MouseInfo.getPointerInfo().getLocation().y);
+            CommonalityMethod.openFriendHomePage(method);
         }
-        Main.robot.mouseMove(85, 150);
-        Main.robot.mouseWheel(2);
-    }
-    static void initFriend_3(CommonalityMethod method){
-        for(int x = 9; x < 10; x++){
-            Main.robot.mouseMove(85, 180 + 54 * x);
-            MouseDispose.leftClick();
-            openFriendHomePage(method);
-            System.out.println(MouseInfo.getPointerInfo().getLocation().x + "----------" + MouseInfo.getPointerInfo().getLocation().y);
-        }
-        Main.robot.mouseMove(85, 180);
-        Main.robot.mouseWheel(4);
-        sleep(500);
+        ParamStatic.robot.mouseMove(x, y);
+        ParamStatic.robot.mouseWheel(wheel);
     }
 
     /**
@@ -312,21 +255,33 @@ public interface CommonalityMethod {
      */
     static void behindFriend(CommonalityMethod method, int x, int y) {
         for(int number = 0; number < 8; number++) {
-            Main.robot.mouseMove(x, y + 54 * number);
+            ParamStatic.robot.mouseMove(x, y + 54 * number);
             MouseDispose.leftClick();
             if(openFriendHomePage(method)) {
                 continue;
             }
             else {
                 Point point = MouseInfo.getPointerInfo().getLocation();
-                Main.robot.mouseMove(point.x, point.y + 30);
+                ParamStatic.robot.mouseMove(point.x, point.y + 30);
             }
             Point point = MouseInfo.getPointerInfo().getLocation();
-            Main.robot.mouseMove(point.x, point.y + 54);
+            ParamStatic.robot.mouseMove(point.x, point.y + 54);
         }
     }
 
-    static void formerlyComment(){
-        Pattern pat = Pattern.compile("");
+
+    /**
+     *  当前帐号结束广告投放，开始登出
+     */
+    static void logout() {
+        List<Point> points = PictureFind.getResult("logout1.1.png");
+        if(!(points.size() > 0)){
+            points = PictureFind.getResult("logout1.png");
+        }
+        ParamStatic.robot.mouseMove(points.get(0).x, points.get(0).y);
+        MouseDispose.leftClick();
+        points = PictureFind.getResult("logout1.1.png");
+        ParamStatic.robot.mouseMove(points.get(0).x, points.get(0).y);
+        MouseDispose.leftClick();
     }
 }

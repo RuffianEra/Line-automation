@@ -1,7 +1,7 @@
 package com.LineAssistant.PictureDispose;
 
 import com.LineAssistant.ControlFlow.CommonalityMethod;
-import com.LineAssistant.Main;
+import com.LineAssistant.ParamStatic;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -75,7 +75,7 @@ public class PictureFind {
         CommonalityMethod.sleep(500);
         int width = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
         int height = (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight();
-        BufferedImage image = Main.robot.createScreenCapture(new Rectangle(0, 0, width, height));
+        BufferedImage image = ParamStatic.robot.createScreenCapture(new Rectangle(0, 0, width, height));
         return image;
     }
 

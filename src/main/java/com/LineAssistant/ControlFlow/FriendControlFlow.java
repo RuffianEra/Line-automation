@@ -1,7 +1,8 @@
 package com.LineAssistant.ControlFlow;
 
+import com.GUI.Chart;
 import com.LineAssistant.KeyboardDispose.KeyboardDispose;
-import com.LineAssistant.Main;
+import com.LineAssistant.ParamStatic;
 import com.LineAssistant.MouseDispose.MouseDispose;
 import com.LineAssistant.PictureDispose.PictureFind;
 import com.sun.jna.platform.win32.User32;
@@ -20,18 +21,9 @@ public class FriendControlFlow implements CommonalityMethod{
     /** 设置赞过的第一个好友头像坐标点 */
     private static Point praiseFriend = new Point(0, 0);
 
-    /** 记录分享的数据数目 */
-    public static int sum = 0;
-
-    /** 记录分享的好友数目 */
-    public static int sumFriend = 0;
-
-    /** 记录当前好友名称 */
-    public static String friendName = "";
-
     public void callMain(){
-        List<BufferedImage> list = new ArrayList<>();
-        FriendControlFlow.circulationFrinedImage(list);
+        /*List<BufferedImage> list = new ArrayList<>();
+        FriendControlFlow.circulationFrinedImage(list);*/
     }
 
     /**
@@ -39,27 +31,27 @@ public class FriendControlFlow implements CommonalityMethod{
      * @param images  对该好友进行一次快照
      */
     public static void circulationFrinedImage(List<BufferedImage> images) {
-        List<Point> list = PictureFind.getResult(Main.url + "\\expression.png");
+        List<Point> list = PictureFind.getResult(ParamStatic.url + "\\expression.png");
 
         WinDef.HWND hwnd = User32.INSTANCE.FindWindowEx(null, null, "Qt5QWindowIcon", null);
         WinDef.RECT rect = new WinDef.RECT();
         User32.INSTANCE.GetWindowRect(hwnd, rect);
 
-        BufferedImage image = Main.robot.createScreenCapture(new Rectangle(rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top));
+        BufferedImage image = ParamStatic.robot.createScreenCapture(new Rectangle(rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top));
 
         if(list.size() == 0) {
             images.add(image);
             if((images.size() > 1 && PictureFind.isImageCompare(images.get(images.size() - 1), images.get(images.size() - 2))) || images.size() > 100){  System.out.println("没有人称赞当前好友,直接跳过!!!"); return; }
-            Main.robot.mouseWheel(2);
+            ParamStatic.robot.mouseWheel(2);
             CommonalityMethod.sleep(1000);
             circulationFrinedImage(images);
         }
         else{
             Point coord = list.get(0);
-            Main.robot.mouseMove(coord.x, coord.y);
+            ParamStatic.robot.mouseMove(coord.x, coord.y);
             MouseDispose.leftClick();
 
-            immobilization = CommonalityMethod.isExist(Main.url + "\\rightPoint.png", -1, 0);
+            immobilization = CommonalityMethod.isExist(ParamStatic.url + "\\rightPoint.png", -1, 0);
 
             praiseFriend.x = immobilization.x + 5;
             praiseFriend.y = immobilization.y + 68;
@@ -73,18 +65,19 @@ public class FriendControlFlow implements CommonalityMethod{
      *  开始评论
      */
     public static void circulationPraiseFriend() {
-        List<Point> friendReplyICO = PictureFind.getResult(Main.url + "\\comment.png");
+        List<Point> friendReplyICO = PictureFind.getResult(ParamStatic.url + "\\comment.png");
         List<BufferedImage> listImage = new ArrayList<>();
-        for ( int x = 0; x < 100; x++){
+        int sum = Chart.depthTwo == 0 ? 100 : Chart.depthTwo;
+        for ( int x = 0; x < sum; x++){
             /** 移动到固定点(好友赞数量上) */
-            Main.robot.mouseMove(immobilization.x - 6, immobilization.y);
+            ParamStatic.robot.mouseMove(immobilization.x - 6, immobilization.y);
             MouseDispose.leftClick();
 
             /** 移动到第x+1个赞用户图标上，每三个用户就鼠标滚动一次 */
-            Main.robot.mouseMove(praiseFriend.x, praiseFriend.y + x % 3 * 48);
+            ParamStatic.robot.mouseMove(praiseFriend.x, praiseFriend.y + x % 3 * 48);
             CommonalityMethod.sleep(1000);
             for(int y = 0; y < x/3; y++){
-                Main.robot.mouseWheel(1);
+                ParamStatic.robot.mouseWheel(1);
                 CommonalityMethod.sleep(1000);
             }
 
@@ -93,20 +86,20 @@ public class FriendControlFlow implements CommonalityMethod{
                 WinDef.RECT rect = new WinDef.RECT();
                 User32.INSTANCE.GetWindowRect(hwnd1, rect);
 
-                listImage.add(Main.robot.createScreenCapture(new Rectangle(rect.left,rect.top, rect.right - rect.left, rect.bottom - rect.top)));
+                listImage.add(ParamStatic.robot.createScreenCapture(new Rectangle(rect.left,rect.top, rect.right - rect.left, rect.bottom - rect.top)));
                 if( listImage.size()>= 2 && PictureFind.isImageCompare(listImage.get(x/3), listImage.get(x/3-1)) ) {
                     System.out.println("点赞列表已经遍历结束！！！");
                     KeyboardDispose.esc(); return;
                 }
             }
             if(x == 1) {
-                List<Point> oneBlank = PictureFind.getResult(Main.url + "\\oneBlankPraise.png");
+                List<Point> oneBlank = PictureFind.getResult(ParamStatic.url + "\\oneBlankPraise.png");
                 for(Point coord:oneBlank){
                     if( coord.x - 136 < immobilization.x && coord.x > immobilization.x){ return; }
                 }
             }
             else if(x == 2){
-                List<Point> twoBlank = PictureFind.getResult(Main.url + "\\twoBlankPraise.png");
+                List<Point> twoBlank = PictureFind.getResult(ParamStatic.url + "\\twoBlankPraise.png");
                 for(Point coord:twoBlank){
                     if( coord.x - 136 < immobilization.x && coord.x > immobilization.x){ return; }
                 }
@@ -117,7 +110,7 @@ public class FriendControlFlow implements CommonalityMethod{
                 System.out.println("跳过当前角色！！！");
                 continue;
             }
-            else if(friendName.equals(CommonalityMethod.mouseMove())){
+            else if(ParamStatic.friendName.equals(CommonalityMethod.mouseMove())){
                 return;
             }
 
@@ -126,7 +119,7 @@ public class FriendControlFlow implements CommonalityMethod{
             CommonalityMethod.mouseMove();
 
             /** 判断该用户有没有发送过说说 */
-            if(PictureFind.getResult(Main.url + "\\blank.png").size() == 1 || PictureFind.getResult(Main.url + "\\delect.png").size() == 1){
+            if(PictureFind.getResult(ParamStatic.url + "\\blank.png").size() == 1 || PictureFind.getResult(ParamStatic.url + "\\delect.png").size() == 1){
                 KeyboardDispose.esc();
                 continue;
             }
@@ -135,11 +128,11 @@ public class FriendControlFlow implements CommonalityMethod{
                 List<Point> twoFriendReplyICO;
                 BufferedImage presentScreen = PictureFind.getScreenPicture();
                 while (true){
-                    twoFriendReplyICO = PictureFind.getResult(Main.url + "\\comment.png");
+                    twoFriendReplyICO = PictureFind.getResult(ParamStatic.url + "\\comment.png");
                     if(twoFriendReplyICO.size() > friendReplyICO.size()){
                         break;
                     }
-                    Main.robot.mouseWheel(1);
+                    ParamStatic.robot.mouseWheel(1);
                     CommonalityMethod.sleep(500);
                     BufferedImage buff = PictureFind.getScreenPicture();
                     CommonalityMethod.sleep(500);
@@ -150,25 +143,25 @@ public class FriendControlFlow implements CommonalityMethod{
 
                 /** 移动并开始评论好友的好友 */
                 Point the = twoFriendReplyICO.get(friendReplyICO.size());
-                Main.robot.mouseMove(the.x, the.y);
+                ParamStatic.robot.mouseMove(the.x, the.y);
                 MouseDispose.leftClick();
                 KeyboardDispose.pasteData();
 
                 /** 评论完成开始分享 */
-                for(int y = 0; y < 5; y++){
-                    List<Point> share = PictureFind.getResult(Main.url + "\\commentOut.png");
+                while(true){
+                    List<Point> share = PictureFind.getResult(ParamStatic.url + "\\commentOut.png");
                     if(share.size() > 0){
-                        Main.robot.mouseMove(share.get(share.size()-1).x, share.get(share.size()-1).y);
+                        ParamStatic.robot.mouseMove(share.get(share.size()-1).x, share.get(share.size()-1).y);
                         break;
                     }
-                    CommonalityMethod.sleep(1000);
-                    Main.robot.mouseWheel(1);
-                    CommonalityMethod.sleep(1000);
+                    CommonalityMethod.sleep(500);
+                    ParamStatic.robot.mouseWheel(1);
+                    CommonalityMethod.sleep(500);
                 }
                 MouseDispose.leftClick();
             }
-            sum ++;
-            Main.logger.info("------------目前已经回复了" + sum  + "条说说");
+            ParamStatic.logger.info("------------目前已经回复了" + ++ParamStatic.sum  + "条说说");
+            if( ParamStatic.sum >= (Chart.amountOne == 0 ? 100 : Chart.amountOne)){ ParamStatic.logger.info("评论目标数已达到，程序关闭!!!");System.exit(0); }
             KeyboardDispose.esc();
         }
     }

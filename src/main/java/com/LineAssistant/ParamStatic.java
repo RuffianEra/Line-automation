@@ -1,8 +1,6 @@
 package com.LineAssistant;
 
 import com.GUI.LoggerJFrame;
-import com.LineAssistant.ControlFlow.CommonalityMethod;
-import com.LineAssistant.ControlFlow.FriendControlFlow;
 import com.sun.jna.platform.win32.User32;
 import com.sun.jna.platform.win32.WinDef;
 import org.apache.log4j.ConsoleAppender;
@@ -12,14 +10,12 @@ import org.apache.log4j.PatternLayout;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
 import java.io.*;
-import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
-public class Main {
+public class ParamStatic {
     /** 机器人对象，用于控制鼠标和键盘的各种操作 */
     public static Robot robot = null;
 
@@ -33,10 +29,23 @@ public class Main {
     public static Properties prop = new Properties();
 
     /** 配置日志 */
-    public static Logger logger = Logger.getLogger(Main.class);
+    public static Logger logger = Logger.getLogger(ParamStatic.class);
+
+    /** 记录分享的数据数目 */
+    public static int sum = 0;
+
+    /** 记录分享的好友数目 */
+    public static int sumFriend = 0;
+
+    /** 记录当前好友名称 */
+    public static String friendName = "";
+
+    /** 保存所有循环过的好友 */
+    public static List<String> list = new ArrayList<>();
 
     static{
         try{
+            prop.load(new FileInputStream(System.getProperty("user.dir") + "\\parameter.properties"));
             robot = new Robot();
             logger.addAppender(new FileAppender(new PatternLayout("%d{yyyy MM dd HH:mm:ss}  %m %n"), System.getProperty("user.dir") + "\\logger.txt", true));
             logger.addAppender(new ConsoleAppender(new PatternLayout("%d{yyyy MM dd HH:mm:ss}  %m %n")));

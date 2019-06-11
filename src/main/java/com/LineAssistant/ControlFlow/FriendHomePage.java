@@ -1,7 +1,8 @@
 package com.LineAssistant.ControlFlow;
 
+import com.GUI.Chart;
 import com.LineAssistant.KeyboardDispose.KeyboardDispose;
-import com.LineAssistant.Main;
+import com.LineAssistant.ParamStatic;
 import com.LineAssistant.MouseDispose.MouseDispose;
 import com.LineAssistant.PictureDispose.PictureFind;
 
@@ -20,23 +21,24 @@ public class FriendHomePage implements CommonalityMethod{
     public static void comment(){
 
         /** 单击评论按钮 */
-        Point comment = CommonalityMethod.isExist(Main.url + "\\comment.png", 1, 0);
+        Point comment = CommonalityMethod.isExist(ParamStatic.url + "\\comment.png", 1, 0);
         if( comment == null ){ return; }
-        Main.robot.mouseMove(comment.x, comment.y);
+        ParamStatic.robot.mouseMove(comment.x, comment.y);
         MouseDispose.leftClick();
 
-        if(PictureFind.getResult(Main.url + "\\networkConnect.png").size() > 0 ){ return ; }
+        if(PictureFind.getResult(ParamStatic.url + "\\networkConnect.png").size() > 0 ){ return ; }
 
         /** 移动到评论框 */
-        Point commentOut = CommonalityMethod.isExist(Main.url + "\\commentOut.png", 1, 0);
-        Main.robot.mouseMove(commentOut.x - 50, commentOut.y);
+        Point commentOut = CommonalityMethod.isExist(ParamStatic.url + "\\commentOut.png", 1, 0);
+        ParamStatic.robot.mouseMove(commentOut.x - 50, commentOut.y);
         MouseDispose.leftClick();
 
         KeyboardDispose.pasteData();
 
-        Main.robot.mouseMove(commentOut.x, commentOut.y);
+        ParamStatic.robot.mouseMove(commentOut.x, commentOut.y);
         MouseDispose.leftClick();
 
-        Main.logger.info("------------目前已经回复了" + ++FriendControlFlow.sum  + "条说说");
+        ParamStatic.logger.info("------------目前已经回复了" + ++ParamStatic.sum  + "条说说");
+        if( ParamStatic.sum >= (Chart.amountOne == 0 ? 100 : Chart.amountOne)){ ParamStatic.logger.info("评论目标数已达到，程序关闭!!!");System.exit(0); }
     }
 }

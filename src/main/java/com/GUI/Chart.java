@@ -3,21 +3,15 @@ package com.GUI;
 import com.LineAssistant.ControlFlow.CommonalityMethod;
 import com.LineAssistant.ControlFlow.FriendControlFlow;
 import com.LineAssistant.ControlFlow.FriendHomePage;
-import com.LineAssistant.Main;
-import com.LineAssistant.PictureDispose.PictureFind;
+import com.LineAssistant.ControlFlow.Windows_10_Line;
+import com.LineAssistant.ParamStatic;
 
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import javax.swing.event.MouseInputListener;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.List;
 
 public class Chart extends JFrame {
     public static ButtonGroup group = new ButtonGroup();                             /** 评论功能单选框 */
@@ -90,22 +84,15 @@ public class Chart extends JFrame {
             public void mousePressed(MouseEvent e) { }
             public void mouseReleased(MouseEvent e) {
                 user = users.getText();
-                amountOne = Integer.valueOf(amount.getText());
-                System.out.println(depth.getText().equals("") ? 0 : depth.getText());
-                //depthTwo = Integer.valueOf(depth.getText().equals("") ? 0 : depth.getText());
-                System.out.println(amountOne + "____________" + depthTwo);
-                /** Line正式登陆 */
-                //CommonalityMethod.login(users.getText(), password.getText());
-                //CommonalityMethod.sleep(4000);
+                amountOne = amount.getText().equals("") ? 0 : Integer.valueOf(amount.getText());
+                depthTwo = depth.getText().equals("") ? 0 : Integer.valueOf(depth.getText());
 
-                /*CommonalityMethod.initCopy();
-
-                if("1".equals(group.getSelection().getActionCommand())){
-                    new Thread( () -> CommonalityMethod.circulationFriendList(new FriendHomePage()) ).start();
+                if("1".equals(group.getSelection().getActionCommand())) {
+                    keyValues(new FriendHomePage());
                 }
-                else if("2".equals(group.getSelection().getActionCommand())){
-                    new Thread( () -> CommonalityMethod.circulationFriendList(new FriendControlFlow()) ).start();
-                }*/
+                else if("2".equals(group.getSelection().getActionCommand())) {
+                    keyValues(new FriendControlFlow());
+                }
             }
             public void mouseEntered(MouseEvent e) { }
             public void mouseExited(MouseEvent e) { }
@@ -186,5 +173,45 @@ public class Chart extends JFrame {
                 BorderFactory.createEmptyBorder(2, 2,2 ,2)));
         three.add(jScrollPane);
         this.add(three);
+    }
+
+
+    /**
+     * 获取配置文件中的所有帐号密码键值对(key_value)，并循环所有帐号进行广告投放
+     * @param common
+     */
+    public static void keyValues(CommonalityMethod common) {
+        System.out.println(Chart.textArea.getText());
+        ParamStatic.clip.setContents(new StringSelection(Chart.textArea.getText()), null);
+        //CommonalityMethod.openLine();
+
+        new Thread( () -> {
+            /** 解析配置文件帐号和密码 */
+            String[] key_values = ParamStatic.prop.getProperty("key_value").split(" ");
+
+            for(String key_value : key_values){
+                /** Line正式登陆 */
+                /*CommonalityMethod.sleep(3000);
+                CommonalityMethod.login(key_value.split("_"));
+                CommonalityMethod.sleep(4000);*/
+                /** 移动Line窗口位置 */
+                CommonalityMethod.initCopy();
+
+
+                /** 登陆Line，开始好友列表循环，广告投放(不同的系统调用接口不同) */
+                String system = System.getProperty("os.name");
+                if(system.equals("Windows 7")){
+                    Windows_10_Line.circulationFriendList(common);
+                }
+                else if(system.equals("Windows 10")){
+                    Windows_10_Line.circulationFriendList(common);
+                }
+                else {
+                    ParamStatic.logger.info("当前项目并不支持" + system + "系统");
+                }
+                /** 完成当前帐号的广告投放，开始退出当前帐号，准备下一个帐号的广告投放 */
+                CommonalityMethod.logout();
+            }
+        } ).start();
     }
 }

@@ -1,7 +1,7 @@
 package com.LineAssistant.MouseDispose;
 
 import com.LineAssistant.ControlFlow.CommonalityMethod;
-import com.LineAssistant.Main;
+import com.LineAssistant.ParamStatic;
 
 import java.awt.event.InputEvent;
 
@@ -12,8 +12,8 @@ public class MouseDispose {
      */
     public static void leftClick() {
         CommonalityMethod.sleep(1000);
-        Main.robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        Main.robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        ParamStatic.robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        ParamStatic.robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         CommonalityMethod.sleep(1000);
     }
 
@@ -22,10 +22,10 @@ public class MouseDispose {
      */
     public static void leftDoublicClick() {
         CommonalityMethod.sleep(1000);
-        Main.robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        Main.robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        Main.robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        Main.robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        ParamStatic.robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        ParamStatic.robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        ParamStatic.robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+        ParamStatic.robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         CommonalityMethod.sleep(1000);
     }
 
@@ -34,8 +34,8 @@ public class MouseDispose {
      */
     public static void rightClick(){
         CommonalityMethod.sleep(1000);
-        Main.robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
-        Main.robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
+        ParamStatic.robot.mousePress(InputEvent.BUTTON3_DOWN_MASK);
+        ParamStatic.robot.mouseRelease(InputEvent.BUTTON3_DOWN_MASK);
         CommonalityMethod.sleep(1000);
     }
 }
