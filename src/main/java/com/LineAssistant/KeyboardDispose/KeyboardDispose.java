@@ -35,4 +35,10 @@ public class KeyboardDispose {
         ParamStatic.robot.keyPress(KeyEvent.VK_ESCAPE);
         ParamStatic.robot.keyRelease(KeyEvent.VK_ESCAPE);
     }
+
+    /** Enter */
+    public static void enter(){
+        ParamStatic.robot.keyPress(KeyEvent.VK_ENTER);
+        ParamStatic.robot.keyRelease(KeyEvent.VK_ENTER);
+    }
 }

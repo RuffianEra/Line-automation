@@ -1,9 +1,6 @@
 package com.GUI;
 
-import com.LineAssistant.ControlFlow.CommonalityMethod;
-import com.LineAssistant.ControlFlow.FriendControlFlow;
-import com.LineAssistant.ControlFlow.FriendHomePage;
-import com.LineAssistant.ControlFlow.Windows_10_Line;
+import com.LineAssistant.ControlFlow.*;
 import com.LineAssistant.ParamStatic;
 
 import javax.swing.*;
@@ -12,8 +9,21 @@ import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Chart extends JFrame {
+    static ThreadPoolExecutor pool = new ThreadPoolExecutor(5, 10, 20000, TimeUnit.MILLISECONDS, new LinkedBlockingDeque());
+    static Set<String> LineID = new HashSet<>();
+
     public static ButtonGroup group = new ButtonGroup();                             /** 评论功能单选框 */
     public static JTextArea textArea = new JTextArea(1, 1);         /** 评论数据 */
     public static JTextArea textAreaLog = new JTextArea(1, 1);      /** 评论日志记录 */
@@ -68,22 +78,18 @@ public class Chart extends JFrame {
         param.add(two);
 
 
+        JFrame jFrame = new JFrame();
+        jFrame.add(new JFileChooser());
+        jFrame.setBounds(1000, 100, 400, 700);
 
         /** 登陆面板 */
         JPanel loginPanel = new JPanel();
         loginPanel.setLayout(new BoxLayout(loginPanel, BoxLayout.LINE_AXIS));
-        loginPanel.add(new JLabel("帐号  "));
-        JTextField users = new JTextField();
-        loginPanel.add(users);
-        loginPanel.add(new JLabel("       密码  "));
-        JTextField password = new JTextField();
-        loginPanel.add(password);
-        JButton login = new JButton("登陆");
+        JButton login = new JButton("Line自动化评论");
         login.addMouseListener(new MouseListener() {
             public void mouseClicked(MouseEvent e) { }
             public void mousePressed(MouseEvent e) { }
             public void mouseReleased(MouseEvent e) {
-                user = users.getText();
                 amountOne = amount.getText().equals("") ? 0 : Integer.valueOf(amount.getText());
                 depthTwo = depth.getText().equals("") ? 0 : Integer.valueOf(depth.getText());
 
@@ -98,6 +104,59 @@ public class Chart extends JFrame {
             public void mouseExited(MouseEvent e) { }
         });
         loginPanel.add(login);
+        JTextField URL = new JTextField();
+        URL.setMaximumSize(new Dimension(200, 28));
+        loginPanel.add(URL);
+        JButton addLine = new JButton("爬取指定网站Line ID并添加");
+        addLine.addMouseListener(new MouseListener() {
+            public void mouseClicked(MouseEvent e) { }
+            public void mousePressed(MouseEvent e) { }
+            public void mouseReleased(MouseEvent e) {
+                try {
+                    Set<String> set = new HashSet<>();
+                    pool.allowCoreThreadTimeOut(true);
+                    reptileURL(set, ParamStatic.prop.getProperty("reptile"), ParamStatic.prop.getProperty("network"));
+
+                    PrintWriter writer = new PrintWriter(new OutputStreamWriter(new FileOutputStream(System.getProperty("user.dir") + "\\reptiles_5.txt")));
+
+                    while( !(pool.getPoolSize() == 0) ) {
+                        System.out.println("当前运行线程-------" + pool.getPoolSize()); Thread.sleep(10000);
+                    }
+                    System.out.println("--------------------------------------------------------");
+
+                    for(String str:set) {
+                        System.out.println(str);
+                        writer.println(str);
+                        pool.execute(() -> {
+                            String returns = reptile(str, ParamStatic.prop.getProperty("LineID"));
+                            if( returns != "" && returns != null){ LineID.add(returns); }
+                        });
+                    }
+
+                    while( !(pool.getPoolSize() == 0) ) {
+                        System.out.println("当前运行线程-------" + pool.getPoolSize()); Thread.sleep(10000);
+                    }
+                    System.out.println("--------------------------------------------------------");
+
+                    for(String str:LineID){
+                        System.out.println(str);
+                        String ing = str.substring(str.indexOf("<span>") + 6, str.indexOf("</span>"));
+                        System.out.println(ing);
+                        writer.println(ing);
+                    }
+                    writer.flush();
+                    writer.close();
+
+                    CommonalityMethod.addFriend(LineID);
+                }
+                catch (Exception e1) {
+                    System.out.println(e1.getMessage());
+                }
+            }
+            public void mouseEntered(MouseEvent e) { }
+            public void mouseExited(MouseEvent e) { }
+        });
+        loginPanel.add(addLine);
         loginPanel.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 0));
 
 
@@ -183,35 +242,98 @@ public class Chart extends JFrame {
     public static void keyValues(CommonalityMethod common) {
         System.out.println(Chart.textArea.getText());
         ParamStatic.clip.setContents(new StringSelection(Chart.textArea.getText()), null);
-        //CommonalityMethod.openLine();
+        CommonalityMethod.openLine();
 
         new Thread( () -> {
             /** 解析配置文件帐号和密码 */
             String[] key_values = ParamStatic.prop.getProperty("key_value").split(" ");
 
             for(String key_value : key_values){
+                ParamStatic.logger.info("-----------------------正在进行" + key_value + "的评论-------------------------------");
                 /** Line正式登陆 */
-                /*CommonalityMethod.sleep(3000);
-                CommonalityMethod.login(key_value.split("_"));
-                CommonalityMethod.sleep(4000);*/
+                CommonalityMethod.sleep(4000);
+                CommonalityMethod.login(key_value.split("|"));
+                CommonalityMethod.sleep(4000);
                 /** 移动Line窗口位置 */
                 CommonalityMethod.initCopy();
 
 
                 /** 登陆Line，开始好友列表循环，广告投放(不同的系统调用接口不同) */
                 String system = System.getProperty("os.name");
-                if(system.equals("Windows 7")){
-                    Windows_10_Line.circulationFriendList(common);
-                }
-                else if(system.equals("Windows 10")){
+                if(system.equals("Windows 10")) {
                     Windows_10_Line.circulationFriendList(common);
                 }
                 else {
-                    ParamStatic.logger.info("当前项目并不支持" + system + "系统");
+                    Windows_Line.circulationFriendList(common);
                 }
                 /** 完成当前帐号的广告投放，开始退出当前帐号，准备下一个帐号的广告投放 */
                 CommonalityMethod.logout();
             }
         } ).start();
+    }
+
+
+    /**
+     * 简单爬虫
+     * @param spec  网络地址
+     * @param regex 过滤正则
+     * @return  爬虫爬取到的数据集
+     * @throws Exception
+     */
+    public static String reptile( String spec, String regex) {
+        Pattern pat = Pattern.compile(regex);
+        try {
+            URLConnection url = new URL(spec).openConnection();
+            url.setConnectTimeout(30000);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.getInputStream(), "UTF-8"));
+            String str = "";
+            while( (str = reader.readLine()) != null) {
+                Matcher matcher = pat.matcher(str);
+                while(matcher.find()){
+                    return matcher.group();
+                }
+            }
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return "";
+    }
+
+    /**
+     *  简单爬虫
+     * @param list  爬虫爬取到的数据集
+     * @param spec  网络地址
+     * @param regex 过滤正则
+     * @throws Exception
+     */
+    public static void reptileURL(Set<String> list, String spec, String regex) {
+        try {
+            Pattern pat = Pattern.compile(regex);
+            URLConnection url = new URL(spec).openConnection();
+            url.setConnectTimeout(30000);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.getInputStream(), "UTF-8"));
+            String str = "";
+            while( (str = reader.readLine()) != null) {
+                Matcher matcher = pat.matcher(str);
+                while(matcher.find()){
+                    String ing = "http://eline.tw" + matcher.group();
+                    if(!list.contains(ing)) {
+                        list.add(ing);
+                        pool.execute( () -> {
+                            try {
+                                reptileURL(list, ing, regex);
+                            }
+                            catch (Exception e) {
+                                System.out.println(e.getMessage());
+                            }
+                        });
+                    }
+                }
+            }
+        }
+        catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

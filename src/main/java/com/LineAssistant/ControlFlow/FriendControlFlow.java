@@ -31,7 +31,7 @@ public class FriendControlFlow implements CommonalityMethod{
      * @param images  对该好友进行一次快照
      */
     public static void circulationFrinedImage(List<BufferedImage> images) {
-        List<Point> list = PictureFind.getResult(ParamStatic.url + "\\expression.png");
+        List<Point> list = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend_Diffusion\\expression.png");
 
         WinDef.HWND hwnd = User32.INSTANCE.FindWindowEx(null, null, "Qt5QWindowIcon", null);
         WinDef.RECT rect = new WinDef.RECT();
@@ -51,7 +51,7 @@ public class FriendControlFlow implements CommonalityMethod{
             ParamStatic.robot.mouseMove(coord.x, coord.y);
             MouseDispose.leftClick();
 
-            immobilization = CommonalityMethod.isExist(ParamStatic.url + "\\rightPoint.png", -1, 0);
+            immobilization = PictureFind.isExist(ParamStatic.url + "\\Comment_Friend_Diffusion\\rightPoint.png", -1, 0);
 
             praiseFriend.x = immobilization.x + 5;
             praiseFriend.y = immobilization.y + 68;
@@ -65,7 +65,7 @@ public class FriendControlFlow implements CommonalityMethod{
      *  开始评论
      */
     public static void circulationPraiseFriend() {
-        List<Point> friendReplyICO = PictureFind.getResult(ParamStatic.url + "\\comment.png");
+        List<Point> friendReplyICO = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\comment.png");
         List<BufferedImage> listImage = new ArrayList<>();
         int sum = Chart.depthTwo == 0 ? 100 : Chart.depthTwo;
         for ( int x = 0; x < sum; x++){
@@ -93,13 +93,13 @@ public class FriendControlFlow implements CommonalityMethod{
                 }
             }
             if(x == 1) {
-                List<Point> oneBlank = PictureFind.getResult(ParamStatic.url + "\\oneBlankPraise.png");
+                List<Point> oneBlank = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend_Diffusion\\oneBlankPraise.png");
                 for(Point coord:oneBlank){
                     if( coord.x - 136 < immobilization.x && coord.x > immobilization.x){ return; }
                 }
             }
             else if(x == 2){
-                List<Point> twoBlank = PictureFind.getResult(ParamStatic.url + "\\twoBlankPraise.png");
+                List<Point> twoBlank = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend_Diffusion\\twoBlankPraise.png");
                 for(Point coord:twoBlank){
                     if( coord.x - 136 < immobilization.x && coord.x > immobilization.x){ return; }
                 }
@@ -119,7 +119,7 @@ public class FriendControlFlow implements CommonalityMethod{
             CommonalityMethod.mouseMove();
 
             /** 判断该用户有没有发送过说说 */
-            if(PictureFind.getResult(ParamStatic.url + "\\blank.png").size() == 1 || PictureFind.getResult(ParamStatic.url + "\\delect.png").size() == 1){
+            if(PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\blank.png").size() == 1 || PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\delect.png").size() == 1){
                 KeyboardDispose.esc();
                 continue;
             }
@@ -128,7 +128,7 @@ public class FriendControlFlow implements CommonalityMethod{
                 List<Point> twoFriendReplyICO;
                 BufferedImage presentScreen = PictureFind.getScreenPicture();
                 while (true){
-                    twoFriendReplyICO = PictureFind.getResult(ParamStatic.url + "\\comment.png");
+                    twoFriendReplyICO = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\comment.png");
                     if(twoFriendReplyICO.size() > friendReplyICO.size()){
                         break;
                     }
@@ -149,7 +149,7 @@ public class FriendControlFlow implements CommonalityMethod{
 
                 /** 评论完成开始分享 */
                 while(true){
-                    List<Point> share = PictureFind.getResult(ParamStatic.url + "\\commentOut.png");
+                    List<Point> share = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\commentOut.png");
                     if(share.size() > 0){
                         ParamStatic.robot.mouseMove(share.get(share.size()-1).x, share.get(share.size()-1).y);
                         break;
@@ -160,7 +160,7 @@ public class FriendControlFlow implements CommonalityMethod{
                 }
                 MouseDispose.leftClick();
             }
-            ParamStatic.logger.info("------------目前已经回复了" + ++ParamStatic.sum  + "条说说");
+            ParamStatic.logger.info("-----目前已经回复了" + ++ParamStatic.sum  + "条说说");
             if( ParamStatic.sum >= (Chart.amountOne == 0 ? 100 : Chart.amountOne)){ ParamStatic.logger.info("评论目标数已达到，程序关闭!!!");System.exit(0); }
             KeyboardDispose.esc();
         }

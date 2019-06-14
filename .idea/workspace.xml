@@ -8,22 +8,41 @@
   <component name="ChangeListManager">
     <list default="true" id="1c1fa79d-13d6-4a13-9640-366490046acc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/blank.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/blank.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/List_Close/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/comment.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/comment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/commentOut.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/commentOut.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/delect.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/delect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/expression.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend_Diffusion/expression.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/homepage1.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/homepage1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/homepage2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/homepage2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/homepage3.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/homepage3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/homepage4.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/homepage4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/login.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Login_Line/login.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logout1.1.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Logout_Line/logout1.1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logout1.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Logout_Line/logout1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/logout2.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Logout_Line/logout2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/networkConnect.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend/networkConnect.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/newFriend.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/List_Close/newFriend.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/numberList.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/List_Close/numberList.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/oneBlankPraise.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend_Diffusion/oneBlankPraise.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/open.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Login_Line/open.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/openFriend.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/List_Close/openFriend.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/rightPoint.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend_Diffusion/rightPoint.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/twoBlankPraise.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/Comment_Friend_Diffusion/twoBlankPraise.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logger.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logger.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parameter.properties" beforeDir="false" afterPath="$PROJECT_DIR$/parameter.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FriendControlFlowMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FriendHomePageMain.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/GUI/Chart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/GUI/Chart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommonalityMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommonalityMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendControlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendControlFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/OneselfControlFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/OneselfControlFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_10_Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_10_Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_Line.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/KeyboardDispose/KeyboardDispose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/KeyboardDispose/KeyboardDispose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/MouseDispose/MouseDispose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/MouseDispose/MouseDispose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/LineAssistant/PictureDispose/PictureFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/LineAssistant/PictureDispose/PictureFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FriendControlFlowMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FriendHomePageMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/log4jTest/MainC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/log4jTest/MainC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/TestMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TestMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/Chart$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/GUI/Chart$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/GUI/Chart$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/GUI/Chart$2.class" afterDir="false" />
@@ -32,10 +51,9 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/CommonalityMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/CommonalityMethod.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/FriendControlFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/FriendControlFlow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/FriendHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/FriendHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/OneselfControlFlow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/OneselfControlFlow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/Windows_10_Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/Windows_10_Line.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/Windows_Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/ControlFlow/Windows_Line.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/KeyboardDispose/KeyboardDispose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/KeyboardDispose/KeyboardDispose.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/MouseDispose/MouseDispose.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/MouseDispose/MouseDispose.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/LineAssistant/PictureDispose/PictureFind.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/LineAssistant/PictureDispose/PictureFind.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,44 +69,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/GUI/Chart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="206" column="45" selection-start-line="206" selection-start-column="45" selection-end-line="206" selection-end-column="45" />
+            <state relative-caret-position="277">
+              <caret line="131" column="85" selection-start-line="131" selection-start-column="85" selection-end-line="131" selection-end-column="85" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="47" column="130" selection-start-line="47" selection-start-column="130" selection-end-line="47" selection-end-column="130" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/reptiles_5.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/log4jTest/MainC.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/log4jTest/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommonalityMethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="277" selection-start-line="277" selection-end-line="277" />
+            <state relative-caret-position="449">
+              <caret line="269" column="47" lean-forward="true" selection-start-line="269" selection-start-column="47" selection-end-line="269" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_Line.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_10_Line.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -104,12 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>return</find>
-      <find>data</find>
-      <find>mouseMove</find>
-      <find>behindFriend</find>
-      <find>sumFriend</find>
-      <find>Main.url</find>
       <find>FriendControlFlow.sum</find>
       <find>props</find>
       <find>keyReleased</find>
@@ -131,9 +165,15 @@
       <find>WinDef.HWND</find>
       <find>initFriend_2</find>
       <find>oneFriend</find>
-      <find>CommonalityMethod</find>
       <find>login</find>
+      <find>friendName</find>
+      <find>CommonalityMethod</find>
       <find>ParamStatic.robot.mouseWheel</find>
+      <find>\n</find>
+      <find>\\Comment_Friend</find>
+      <find>-&gt;</find>
+      <find>pool</find>
+      <find>System.out.println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,31 +186,34 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/commonalityMethod.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/KeyboardDispose/KeyboardDispose.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/MouseDispose/MouseDispose.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/PictureDispose/PictureFind.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommentFriend.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommonAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/FriendControlFlowMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/FriendHomePageMain.java" />
         <option value="$PROJECT_DIR$/logger.txt" />
         <option value="$PROJECT_DIR$/src/test/java/log4jTest/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/java/log4jTest/MainC.java" />
         <option value="$PROJECT_DIR$/src/test/java/log4jTest/AppenderImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LoggerJFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/GUI/LoggerJFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/OneselfControlFlow.java" />
+        <option value="$PROJECT_DIR$/reptiles.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/PictureDispose/PictureFind.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/KeyboardDispose/KeyboardDispose.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendHomePage.java" />
-        <option value="$PROJECT_DIR$/parameter.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendControlFlow.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/GUI/Chart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/TestMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_10_Line.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_Line.java" />
-        <option value="$PROJECT_DIR$/src/main/java/TestMain.java" />
+        <option value="$PROJECT_DIR$/src/test/java/log4jTest/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommonalityMethod.java" />
+        <option value="$PROJECT_DIR$/parameter.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/log4jTest/MainC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java" />
+        <option value="$PROJECT_DIR$/reptiles_5.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/com/GUI/Chart.java" />
       </list>
     </option>
   </component>
@@ -203,10 +246,10 @@
     <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="887" />
-    <option name="y" value="2" />
-    <option name="width" value="1038" />
-    <option name="height" value="736" />
+    <option name="x" value="686" />
+    <option name="y" value="41" />
+    <option name="width" value="1217" />
+    <option name="height" value="854" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -222,6 +265,11 @@
             <path>
               <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
@@ -279,14 +327,55 @@
             </path>
             <path>
               <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="LineAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="KeyboardDispose" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="LineAssistant" type="462c0819:PsiDirectoryNode" />
+              <item name="PictureDispose" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Line-automation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="log4jTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Line-automation" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,7 +383,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/log4jTest" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -308,13 +397,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IDEA_Work\Line-automation\src\test\java\log4jTest" />
+      <recent name="F:\IDEA_Work\Line-automation\image\NEW_Friend" />
+      <recent name="F:\IDEA_Work\Line-automation" />
       <recent name="F:\IDEA_Work\Line-automation\image" />
       <recent name="F:\IDEA_Work\Line-automation\src\main\java\com" />
-      <recent name="F:\IDEA_Work\Line-automation\src\main\java" />
-      <recent name="F:\IDEA_Work\Line-automation" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\IDEA_Work\Line-automation\image" />
+      <recent name="F:\IDEA_Work\Line-automation\image\Comment_Friend_Diffusion" />
+      <recent name="F:\IDEA_Work\Line-automation\image\Comment_Friend" />
+      <recent name="F:\IDEA_Work\Line-automation\image\List_Close" />
+      <recent name="F:\IDEA_Work\Line-automation\image\Logout_Line" />
+      <recent name="F:\IDEA_Work\Line-automation\image\Login_Line" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -350,15 +444,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FriendHomePageMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FriendHomePageMain" />
+    <configuration name="MainC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="log4jTest.MainC" />
       <module name="Line-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="log4jTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="log4jTest.MainC" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="log4jTest.Test" />
       <module name="Line-automation" />
       <extension name="coverage">
         <pattern>
@@ -380,10 +480,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Chart" />
+        <item itemvalue="Application.MainC" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.TestMain" />
         <item itemvalue="Application.FriendControlFlowMain" />
-        <item itemvalue="Application.MainC" />
-        <item itemvalue="Application.FriendHomePageMain" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +508,10 @@
       <workItem from="1559784555161" duration="662000" />
       <workItem from="1559785646627" duration="23935000" />
       <workItem from="1559957606471" duration="24951000" />
-      <workItem from="1560130106291" duration="42713000" />
+      <workItem from="1560130106291" duration="49738000" />
+      <workItem from="1560304762667" duration="1330000" />
+      <workItem from="1560393040713" duration="18814000" />
+      <workItem from="1560476010707" duration="10923000" />
     </task>
     <task id="LOCAL-00001" summary="Line版本测试">
       <created>1560138692648</created>
@@ -417,17 +520,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560138692649</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Line版本添加Windows 10系统和其他Windows系统差异修改">
+      <created>1560245806177</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560245806177</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170140000" />
+    <option name="totallyTimeSpent" value="208232000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49860334" visible="true" weight="0.1705757" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49860334" visible="true" weight="0.13646056" />
       <window_info id="Structure" order="1" sideWeight="0.50139666" side_tool="true" weight="0.1705757" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -437,15 +547,15 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3275488" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49591002" visible="true" weight="0.20824295" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49631676" visible="true" weight="0.34815618" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50408995" side_tool="true" weight="0.34219268" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50092083" side_tool="true" weight="0.32777777" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4990792" weight="0.32777777" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4978678" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -464,220 +574,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Line版本测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="Line版本测试" />
+    <MESSAGE value="Line版本添加Windows 10系统和其他Windows系统差异修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="Line版本添加Windows 10系统和其他Windows系统差异修改" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/Category.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/Layout.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/PatternLayout.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/log4jTest/MainC.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/log4jTest/AppenderImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#297#298#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/ButtonGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
-          <folding>
-            <element signature="e#3834#3835#0" expanded="true" />
-            <element signature="e#3866#3867#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/OneselfControlFlow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/lang/CharSequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="33" column="38" lean-forward="true" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="1085" column="32" selection-start-line="1085" selection-start-column="32" selection-end-line="1085" selection-end-column="32" />
-          <folding>
-            <element signature="e#48487#48488#0" expanded="true" />
-            <element signature="e#48531#48532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/util/regex/Matcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="479" column="52" lean-forward="true" selection-start-line="479" selection-start-column="52" selection-end-line="479" selection-end-column="52" />
-          <folding>
-            <element signature="e#17066#17067#0" expanded="true" />
-            <element signature="e#17097#17098#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/networkConnect.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/expression.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/commentOut.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/comment.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/ButtonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="188" column="18" selection-start-line="188" selection-start-column="18" selection-end-line="188" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="1715" column="6" lean-forward="true" selection-start-line="1715" selection-start-column="6" selection-end-line="1715" selection-end-column="6" />
-          <folding>
-            <element signature="e#62338#62339#0" expanded="true" />
-            <element signature="e#62391#62392#0" expanded="true" />
-            <element signature="e#63792#63793#0" expanded="true" />
-            <element signature="e#63841#63842#0" expanded="true" />
-            <element signature="e#65158#65159#0" expanded="true" />
-            <element signature="e#65207#65208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/awt/Dimension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="95" column="36" lean-forward="true" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding>
-            <element signature="e#2206#2207#0" expanded="true" />
-            <element signature="e#2232#2233#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="185" column="22" selection-start-line="185" selection-start-column="22" selection-end-line="185" selection-end-column="22" />
-          <folding>
-            <element signature="e#77478#77479#0" expanded="true" />
-            <element signature="e#77522#77523#0" expanded="true" />
-            <element signature="e#83404#83405#0" expanded="true" />
-            <element signature="e#83458#83459#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/Box.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4028">
-          <caret line="246" column="27" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/awt/LayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/awt/GridLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="160" column="44" lean-forward="true" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
-          <folding>
-            <element signature="e#4996#4997#0" expanded="true" />
-            <element signature="e#5034#5035#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/lang/Runnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/awt/event/MouseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="70" column="68" lean-forward="true" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/BoxLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="153" column="50" lean-forward="true" selection-start-line="153" selection-start-column="50" selection-end-line="153" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/JPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/JFileChooser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -691,56 +591,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image/openFriend.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/open.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FriendControlFlowMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/login.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logger.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/MouseDispose/MouseDispose.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/KeyboardDispose/KeyboardDispose.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/PictureDispose/PictureFind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1538">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FriendControlFlowMain.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/GUI/LoggerJFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -751,34 +602,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parameter.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/LineSystem.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/FriendHomePageMain.java" />
+    <entry file="file://$PROJECT_DIR$/logger.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+        <state relative-caret-position="342">
+          <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/LineSystem.java">
+    <entry file="file://$PROJECT_DIR$/reptiles.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="345">
+          <caret line="681" column="65" lean-forward="true" selection-start-line="681" selection-start-column="65" selection-end-line="681" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java">
+    <entry file="file://$PROJECT_DIR$/image/Login_Line/login.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Login_Line/open.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Logout_Line/logout1.1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Logout_Line/logout1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Logout_Line/logout2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/List_Close/newFriend.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/List_Close/close.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/List_Close/openFriend.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/List_Close/numberList.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend/blank.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend/comment.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend/commentOut.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend_Diffusion/twoBlankPraise.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend_Diffusion/oneBlankPraise.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend_Diffusion/expression.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend_Diffusion/rightPoint.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/MouseDispose/MouseDispose.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+        <state relative-caret-position="272">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/add.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/noFriend.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/fiendFriend.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/addFriend_Failed.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend/delect.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/addFriend_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/addFriend_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/KeyboardDispose/KeyboardDispose.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/NEW_Friend/eliminate.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/Comment_Friend/networkConnect.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendHomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/PictureDispose/PictureFind.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="40" column="84" selection-start-line="40" selection-start-column="84" selection-end-line="41" selection-end-column="141" />
+        <state relative-caret-position="2489">
+          <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -787,44 +729,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/FriendControlFlow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+        <state relative-caret-position="2774">
+          <caret line="157" column="52" selection-start-line="157" selection-start-column="52" selection-end-line="157" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image/numberList.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/logout2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/logout1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/logout1.1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/GUI/Chart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="206" column="45" selection-start-line="206" selection-start-column="45" selection-end-line="206" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_10_Line.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
+        <state relative-caret-position="798">
+          <caret line="49" column="17" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FriendHomePageMain.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_Line.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+        <state relative-caret-position="1159">
+          <caret line="68" column="41" selection-start-line="68" selection-start-column="41" selection-end-line="68" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -833,31 +756,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TestMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="247">
+          <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/Windows_Line.java">
+    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/javax/swing/text/JTextComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="256">
+          <caret line="1692" column="18" selection-start-line="1692" selection-start-column="18" selection-end-line="1692" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ControlFlow/CommonalityMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="277" selection-start-line="277" selection-end-line="277" />
+        <state relative-caret-position="449">
+          <caret line="269" column="47" lean-forward="true" selection-start-line="269" selection-start-column="47" selection-end-line="269" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/util/concurrent/ThreadPoolExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="1803" column="5" lean-forward="true" selection-start-line="1803" selection-start-column="5" selection-end-line="1803" selection-end-column="5" />
+          <folding>
+            <element signature="e#61630#61631#0" expanded="true" />
+            <element signature="e#61665#61666#0" expanded="true" />
+            <element signature="e#65777#65778#0" expanded="true" />
+            <element signature="e#65815#65816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/log4jTest/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reptiles_9.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://F:/Java/jdk1.8.0_101/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="407" column="20" lean-forward="true" selection-start-line="407" selection-start-column="20" selection-end-line="407" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/log4jTest/MainC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reptiles_5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/LineAssistant/ParamStatic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="47" column="130" selection-start-line="47" selection-start-column="130" selection-end-line="47" selection-end-column="130" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/GUI/Chart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="131" column="85" selection-start-line="131" selection-start-column="85" selection-end-line="131" selection-end-column="85" />
         </state>
       </provider>
     </entry>

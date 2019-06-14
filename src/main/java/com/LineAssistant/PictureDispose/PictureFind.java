@@ -32,6 +32,8 @@ public class PictureFind {
         return list;
     }
 
+
+
     /**
      *  根据图片查找屏幕上对应的图片位置
      * @param image
@@ -67,6 +69,8 @@ public class PictureFind {
         return coord;
     }
 
+
+
     /**
      *  获取当前屏幕图片
      * @return
@@ -78,6 +82,8 @@ public class PictureFind {
         BufferedImage image = ParamStatic.robot.createScreenCapture(new Rectangle(0, 0, width, height));
         return image;
     }
+
+
 
     /**
      *  获取指定图片的所有像素RGB模型数组
@@ -97,6 +103,8 @@ public class PictureFind {
         return result;
     }
 
+
+
     /**
      *  目标图片与对应截图上的映射图片四角RGB像素相同, 填充屏幕截屏图片上对应图片与目标图片进行对比
      * @param x 映射图片左上角的x轴坐标
@@ -114,6 +122,8 @@ public class PictureFind {
         return true;
     }
 
+
+
     /**
      * 两图对比全等
      * @param one
@@ -130,5 +140,27 @@ public class PictureFind {
             }
         }
         return true;
+    }
+
+
+
+
+    /**
+     *  判断当前图标是否在屏幕中出现
+     * @param url   图标地址
+     * @param quantity   当图标未出现时，滚动滚轮数量
+     * @return  返回第一个图标中心点坐标
+     */
+    public static Point isExist(String url, int quantity, int next){
+        List<Point> exists = PictureFind.getResult(url);
+        if( exists.size() > 0 ) {
+            return exists.get(0);
+        }
+        else {
+            if( next >= 5){ return null;}
+            ParamStatic.robot.mouseWheel(quantity);
+            CommonalityMethod.sleep(500);
+            return isExist(url, quantity, ++next);
+        }
     }
 }

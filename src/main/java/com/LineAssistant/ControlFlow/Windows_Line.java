@@ -12,17 +12,15 @@ import java.util.List;
 /** 非Windows 10和WindowsPhone的Windows系统中运行时使用该类进行列表循环 */
 public interface Windows_Line {
     /** 直接设置第一个好友图标中心点 */
-    Point oneFriend = new Point(85, 1124);
+    Point oneFriend = new Point(85, 112);
 
     /**
      *  循环好友列表
      * @param method  多态，根据对象调用对应方法
      */
     static void circulationFriendList(CommonalityMethod method) {
-        /** 循环列表之前先关闭所有列表 */
-        CommonalityMethod.listInit();
 
-        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\numberList.png");
+        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\List_Close\\numberList.png");
         /** 把列表调整为可以通一调用的形式 */
         if( list.size() == 1 ) { CommonalityMethod.initFriend(method, 85, 150, 6, 4); }
         else if( list.size() == 2 ) { CommonalityMethod.initFriend(method, 85, 180, 4, 3); }
@@ -39,7 +37,7 @@ public interface Windows_Line {
 
             /** 每5个好友滚动3次 */
             if(0 == y%5 && y != 0) {
-                oneFriend.y -= 2;
+                oneFriend.y --;
                 if(oneFriend.y <= 105) {
                     oneFriend.y += 55;
                     ParamStatic.robot.mouseMove(oneFriend.x, oneFriend.y + y%5*54);

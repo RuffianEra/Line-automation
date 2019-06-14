@@ -19,10 +19,8 @@ public interface Windows_10_Line {
      * @param method  多态，根据对象调用对应方法
      */
     static void circulationFriendList(CommonalityMethod method) {
-        /** 循环列表之前先关闭所有列表 */
-        CommonalityMethod.listInit();
 
-        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\numberList.png");
+        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\List_Close\\numberList.png");
         if( list.size() == 1 ) { CommonalityMethod.initFriend(method, 85, 150, 5, 2); }
         else if( list.size() == 2 ) { CommonalityMethod.initFriend(method, 85, 150, 10, 4); }
 

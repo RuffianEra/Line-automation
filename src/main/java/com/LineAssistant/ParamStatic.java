@@ -45,7 +45,7 @@ public class ParamStatic {
 
     static{
         try{
-            prop.load(new FileInputStream(System.getProperty("user.dir") + "\\parameter.properties"));
+            prop.load(new InputStreamReader(new FileInputStream(System.getProperty("user.dir") + "\\parameter.properties"), "UTF-8"));
             robot = new Robot();
             logger.addAppender(new FileAppender(new PatternLayout("%d{yyyy MM dd HH:mm:ss}  %m %n"), System.getProperty("user.dir") + "\\logger.txt", true));
             logger.addAppender(new ConsoleAppender(new PatternLayout("%d{yyyy MM dd HH:mm:ss}  %m %n")));
