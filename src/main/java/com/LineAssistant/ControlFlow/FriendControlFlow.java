@@ -22,8 +22,8 @@ public class FriendControlFlow implements CommonalityMethod{
     private static Point praiseFriend = new Point(0, 0);
 
     public void callMain(){
-        /*List<BufferedImage> list = new ArrayList<>();
-        FriendControlFlow.circulationFrinedImage(list);*/
+        List<BufferedImage> list = new ArrayList<>();
+        FriendControlFlow.circulationFrinedImage(list);
     }
 
     /**
@@ -127,9 +127,10 @@ public class FriendControlFlow implements CommonalityMethod{
                 /** 获取当前屏幕所有回复评论图标 */
                 List<Point> twoFriendReplyICO;
                 BufferedImage presentScreen = PictureFind.getScreenPicture();
-                while (true){
+                while (true) {
+                    /** 获取评论按钮 */
                     twoFriendReplyICO = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\comment.png");
-                    if(twoFriendReplyICO.size() > friendReplyICO.size()){
+                    if(twoFriendReplyICO.size() > friendReplyICO.size()) {
                         break;
                     }
                     ParamStatic.robot.mouseWheel(1);
@@ -147,10 +148,12 @@ public class FriendControlFlow implements CommonalityMethod{
                 MouseDispose.leftClick();
                 KeyboardDispose.pasteData();
 
+                if(PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\networkConnect.png").size() > 0 ){ return ; }
+
                 /** 评论完成开始分享 */
                 while(true){
                     List<Point> share = PictureFind.getResult(ParamStatic.url + "\\Comment_Friend\\commentOut.png");
-                    if(share.size() > 0){
+                    if(share.size() > 0) {
                         ParamStatic.robot.mouseMove(share.get(share.size()-1).x, share.get(share.size()-1).y);
                         break;
                     }

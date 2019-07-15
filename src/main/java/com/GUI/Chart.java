@@ -119,31 +119,22 @@ public class Chart extends JFrame {
 
                     PrintWriter writer = new PrintWriter(new OutputStreamWriter(new FileOutputStream(System.getProperty("user.dir") + "\\reptiles_5.txt")));
 
-                    while( !(pool.getPoolSize() == 0) ) {
-                        System.out.println("当前运行线程-------" + pool.getPoolSize()); Thread.sleep(10000);
-                    }
-                    System.out.println("--------------------------------------------------------");
+                    while( !(pool.getPoolSize() == 0) ) { Thread.sleep(10000); }
 
                     for(String str:set) {
                         System.out.println(str);
                         writer.println(str);
                         pool.execute(() -> {
                             String returns = reptile(str, ParamStatic.prop.getProperty("LineID"));
-                            if( returns != "" && returns != null){ LineID.add(returns); }
+                            if( returns != "" && returns != null){
+                                String ID = returns.substring(returns.indexOf("<span>") + 6, returns.indexOf("</span>"));
+                                writer.write(ID);
+                                LineID.add(ID);
+                            }
                         });
                     }
 
-                    while( !(pool.getPoolSize() == 0) ) {
-                        System.out.println("当前运行线程-------" + pool.getPoolSize()); Thread.sleep(10000);
-                    }
-                    System.out.println("--------------------------------------------------------");
-
-                    for(String str:LineID){
-                        System.out.println(str);
-                        String ing = str.substring(str.indexOf("<span>") + 6, str.indexOf("</span>"));
-                        System.out.println(ing);
-                        writer.println(ing);
-                    }
+                    while( !(pool.getPoolSize() == 0) ) { Thread.sleep(10000); }
                     writer.flush();
                     writer.close();
 
@@ -245,6 +236,7 @@ public class Chart extends JFrame {
         CommonalityMethod.openLine();
 
         new Thread( () -> {
+            System.out.println(ParamStatic.prop.getProperty("key_value"));
             /** 解析配置文件帐号和密码 */
             String[] key_values = ParamStatic.prop.getProperty("key_value").split(" ");
 
@@ -252,11 +244,13 @@ public class Chart extends JFrame {
                 ParamStatic.logger.info("-----------------------正在进行" + key_value + "的评论-------------------------------");
                 /** Line正式登陆 */
                 CommonalityMethod.sleep(4000);
-                CommonalityMethod.login(key_value.split("|"));
+                CommonalityMethod.login(key_value.split(","));
                 CommonalityMethod.sleep(4000);
                 /** 移动Line窗口位置 */
                 CommonalityMethod.initCopy();
 
+                /** 评论数据复制到剪切板 */
+                ParamStatic.clip.setContents(new StringSelection(ParamStatic.prop.getProperty("message")), null);
 
                 /** 登陆Line，开始好友列表循环，广告投放(不同的系统调用接口不同) */
                 String system = System.getProperty("os.name");

@@ -9,7 +9,6 @@ import com.sun.jna.platform.win32.WinDef;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -257,18 +256,13 @@ public interface CommonalityMethod {
     static void addFriend(Set<String> set) {
         boolean header = true;
         for(String str : set) {
-            ParamStatic.clip.setContents(new StringSelection(str.substring(str.indexOf("<span>") + 6, str.indexOf("</span>"))), null);
+            ParamStatic.clip.setContents(new StringSelection(str), null);
             if( header ) {
                 fiendClick(new String[]{ParamStatic.url + "\\NEW_Friend\\addFriend_1.png", ParamStatic.url + "\\NEW_Friend\\addFriend_2.png"}, true);
                 fiendClick(new String[]{ParamStatic.url + "\\NEW_Friend\\fiendFriend.png"}, true);
                 header = addFriend_2();
             }
             else {
-                /*List<Point> points = PictureFind.getResult(ParamStatic.url + "\\NEW_Friend\\eliminate.png");
-                ParamStatic.robot.mouseMove(points.get(0).x, points.get(0).y+40);
-                MouseDispose.leftClick();
-                KeyboardDispose.delectData();*/
-
                 fiendClick(new String[]{ParamStatic.url + "\\NEW_Friend\\eliminate.png"}, true);
                 ParamStatic.robot.mouseMove(0, 0);
                 header = addFriend_2();

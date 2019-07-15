@@ -12,7 +12,7 @@ public class FriendHomePage implements CommonalityMethod{
 
     public void callMain(){
         /** 对所有好友主页的第一条分享进行评论 */
-        /*FriendHomePage.comment();*/
+        FriendHomePage.comment();
     }
 
     /**
