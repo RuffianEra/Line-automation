@@ -1,6 +1,7 @@
 package com.GUI;
 
 import com.LineAssistant.ControlFlow.*;
+import com.LineAssistant.MouseDispose.MouseListenerImp;
 import com.LineAssistant.ParamStatic;
 
 import javax.swing.*;
@@ -86,31 +87,40 @@ public class Chart extends JFrame {
         JPanel loginPanel = new JPanel();
         loginPanel.setLayout(new BoxLayout(loginPanel, BoxLayout.LINE_AXIS));
         JButton login = new JButton("Line自动化评论");
-        login.addMouseListener(new MouseListener() {
-            public void mouseClicked(MouseEvent e) { }
-            public void mousePressed(MouseEvent e) { }
+        login.addMouseListener(new MouseListenerImp() {
             public void mouseReleased(MouseEvent e) {
                 amountOne = amount.getText().equals("") ? 0 : Integer.valueOf(amount.getText());
                 depthTwo = depth.getText().equals("") ? 0 : Integer.valueOf(depth.getText());
 
                 if("1".equals(group.getSelection().getActionCommand())) {
-                    keyValues(new FriendHomePage());
+                    keyValues(new FriendHomePage(), 0);
                 }
                 else if("2".equals(group.getSelection().getActionCommand())) {
-                    keyValues(new FriendControlFlow());
+                    keyValues(new FriendControlFlow(), 0);
                 }
             }
-            public void mouseEntered(MouseEvent e) { }
-            public void mouseExited(MouseEvent e) { }
         });
         loginPanel.add(login);
         JTextField URL = new JTextField();
         URL.setMaximumSize(new Dimension(200, 28));
         loginPanel.add(URL);
+        JButton skipFirend = new JButton("跨好友评论");
+        skipFirend.addMouseListener(new MouseListenerImp() {
+            public void mouseReleased(MouseEvent e) {
+                amountOne = amount.getText().equals("") ? 0 : Integer.valueOf(amount.getText());
+                depthTwo = depth.getText().equals("") ? 0 : Integer.valueOf(depth.getText());
+
+                if("1".equals(group.getSelection().getActionCommand())) {
+                    keyValues(new FriendHomePage(), Pattern.compile("\\d*").matcher(URL.getText()).matches()?Integer.valueOf(URL.getText()):0);
+                }
+                else if("2".equals(group.getSelection().getActionCommand())) {
+                    keyValues(new FriendControlFlow(), Pattern.compile("\\d*").matcher(URL.getText()).matches()?Integer.valueOf(URL.getText()):0);
+                }
+            }
+        });
+        /** 爬虫功能目前不需要，不显示 */
         JButton addLine = new JButton("爬取指定网站Line ID并添加");
-        addLine.addMouseListener(new MouseListener() {
-            public void mouseClicked(MouseEvent e) { }
-            public void mousePressed(MouseEvent e) { }
+        addLine.addMouseListener(new MouseListenerImp() {
             public void mouseReleased(MouseEvent e) {
                 try {
                     Set<String> set = new HashSet<>();
@@ -144,10 +154,8 @@ public class Chart extends JFrame {
                     System.out.println(e1.getMessage());
                 }
             }
-            public void mouseEntered(MouseEvent e) { }
-            public void mouseExited(MouseEvent e) { }
         });
-        loginPanel.add(addLine);
+        loginPanel.add(skipFirend);
         loginPanel.setBorder(BorderFactory.createEmptyBorder(5, 0, 5, 0));
 
 
@@ -164,20 +172,12 @@ public class Chart extends JFrame {
         commentDiffusion.setBorder(BorderFactory.createEmptyBorder(10, 80, 10, 0));
 
         group.add(comment);
-        comment.addMouseListener(new MouseListener() {
-            public void mouseClicked(MouseEvent e) { }
-            public void mousePressed(MouseEvent e) { }
+        comment.addMouseListener(new MouseListenerImp() {
             public void mouseReleased(MouseEvent e) { two.setVisible(false);System.out.println(amount.getText()); }
-            public void mouseEntered(MouseEvent e) { }
-            public void mouseExited(MouseEvent e) { }
         });
         group.add(commentDiffusion);
-        commentDiffusion.addMouseListener(new MouseListener() {
-            public void mouseClicked(MouseEvent e) { }
-            public void mousePressed(MouseEvent e) { }
+        commentDiffusion.addMouseListener(new MouseListenerImp() {
             public void mouseReleased(MouseEvent e) { two.setVisible(true);System.out.println(amount.getText() + "________" + depth.getText()); }
-            public void mouseEntered(MouseEvent e) { }
-            public void mouseExited(MouseEvent e) { }
         });
         comment.setSelected(true);
 
@@ -230,7 +230,7 @@ public class Chart extends JFrame {
      * 获取配置文件中的所有帐号密码键值对(key_value)，并循环所有帐号进行广告投放
      * @param common
      */
-    public static void keyValues(CommonalityMethod common) {
+    public static void keyValues(CommonalityMethod common, int skip) {
         System.out.println(Chart.textArea.getText());
         ParamStatic.clip.setContents(new StringSelection(Chart.textArea.getText()), null);
         CommonalityMethod.openLine();
@@ -253,13 +253,19 @@ public class Chart extends JFrame {
                 ParamStatic.clip.setContents(new StringSelection(ParamStatic.prop.getProperty("message")), null);
 
                 /** 登陆Line，开始好友列表循环，广告投放(不同的系统调用接口不同) */
-                String system = System.getProperty("os.name");
+                /*String system = System.getProperty("os.name");
                 if(system.equals("Windows 10")) {
                     Windows_10_Line.circulationFriendList(common);
                 }
                 else {
                     Windows_Line.circulationFriendList(common);
-                }
+                }*/
+                /** 好友列表循环前把列表统一格式调配 */
+                Windows_10_Line.skip(common, 0);
+
+                /** 好友列表循环 */
+                Windows_10_Line.circulationFriendList(common);
+
                 /** 完成当前帐号的广告投放，开始退出当前帐号，准备下一个帐号的广告投放 */
                 CommonalityMethod.logout();
             }

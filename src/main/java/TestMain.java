@@ -19,15 +19,17 @@ public class TestMain {
     public static Properties prop = new Properties();
 
     public static void main( String args[] ) throws Exception{
+        String URL = "123a";
+        System.out.println(Pattern.compile("\\d*").matcher(URL).matches()?Integer.valueOf(URL):0);
         //CommonalityMethod.logout();
 
-        String[] str = new String[]{"barry", "@ndg7991p", "young723"};
+        /*String[] str = new String[]{"barry", "@ndg7991p", "young723"};
         Set<String> set = new HashSet<>();
         set.add("barry");
         set.add("@ndg7991p");
         set.add("young723");
         set.add("@flg9831k");
-        CommonalityMethod.addFriend(set);
+        CommonalityMethod.addFriend(set);*/
     }
 
     public static void t2(){

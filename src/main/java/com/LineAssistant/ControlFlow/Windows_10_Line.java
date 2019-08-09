@@ -14,16 +14,31 @@ public interface Windows_10_Line {
     /** 直接设置第一个好友图标中心点 */
     Point oneFriend = new Point(84, 115);
 
+    static void skip(CommonalityMethod method, int skip){
+        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\List_Close\\numberList.png");
+        if( list.size() == 1 ) {
+            if(skip > 0){
+                CommonalityMethod.skip(5, 2, skip);
+            }
+            else {
+                CommonalityMethod.initFriend(method, 85, 150, 5, 2);
+            }
+        }
+        else if( list.size() == 2 ) {
+            if(skip > 0){
+                CommonalityMethod.skip(10, 4, skip);
+            }
+            else {
+                CommonalityMethod.initFriend(method, 85, 150, 10, 4);
+            }
+        }
+    }
+
     /**
      *  循环好友列表
      * @param method  多态，根据对象调用对应方法
      */
     static void circulationFriendList(CommonalityMethod method) {
-
-        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\List_Close\\numberList.png");
-        if( list.size() == 1 ) { CommonalityMethod.initFriend(method, 85, 150, 5, 2); }
-        else if( list.size() == 2 ) { CommonalityMethod.initFriend(method, 85, 150, 10, 4); }
-
         /** 为轮循好友列表第滚动一次就添加一次快照，用来判断好友列表是否轮循结束 */
         List<BufferedImage> images = new ArrayList<>();
 

@@ -20,10 +20,11 @@ public interface Windows_Line {
      */
     static void circulationFriendList(CommonalityMethod method) {
 
-        List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\List_Close\\numberList.png");
         /** 把列表调整为可以通一调用的形式 */
+        CommonalityMethod.initFriend(method, 85, 150, 5, 2);
+        /*List<Point> list =  PictureFind.getResult(ParamStatic.url + "\\List_Close\\numberList.png");
         if( list.size() == 1 ) { CommonalityMethod.initFriend(method, 85, 150, 6, 4); }
-        else if( list.size() == 2 ) { CommonalityMethod.initFriend(method, 85, 180, 4, 3); }
+        else if( list.size() == 2 ) { CommonalityMethod.initFriend(method, 85, 180, 4, 3); }*/
 
         /** 为轮循好友列表第滚动一次就添加一次快照，用来判断好友列表是否轮循结束 */
         List<BufferedImage> images = new ArrayList<>();

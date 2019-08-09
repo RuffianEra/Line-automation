@@ -93,6 +93,12 @@ public interface CommonalityMethod {
      * Line登陆成功后先关闭所有列表，然后再单独把好友列表打开
      */
     static void listInit() {
+        List<Point> fl = PictureFind.getResult(ParamStatic.url + "\\List_Close\\friendList.png");
+        if( fl.size() > 0 ){
+            ParamStatic.robot.mouseMove(fl.get(0).x, fl.get(0).y);
+            MouseDispose.leftClick();
+        }
+
         List<Point> newF = PictureFind.getResult(ParamStatic.url + "\\List_Close\\newFriend.png");
         if( newF.size() > 0 ){
             ParamStatic.robot.mouseMove(newF.get(0).x, newF.get(0).y);
@@ -192,7 +198,6 @@ public interface CommonalityMethod {
         return true;
     }
 
-
     /**
      *
      * 循环好友列表前对列表进行通一格式调配(当只有两种列表时)
@@ -203,13 +208,34 @@ public interface CommonalityMethod {
      * @param wheel 鼠标滚动轴滚动次数
      */
     static void initFriend(CommonalityMethod method, int x, int y, int next, int wheel){
-        for(int n = 0; x < next; n++){
+        for(int n = 0; n < next; n++){
             ParamStatic.robot.mouseMove(x, y + 54 * n);
             MouseDispose.leftClick();
             CommonalityMethod.openFriendHomePage(method);
         }
         ParamStatic.robot.mouseMove(x, y);
         ParamStatic.robot.mouseWheel(wheel);
+    }
+
+    /**
+     * 跳过好友列表，默认是刚打开Line
+     * @param next  循环列表前先访问好友的个数
+     * @param sum   好友列表数量
+     */
+    static void skip(int next, int wheel, int sum) {
+        ParamStatic.robot.mouseMove(100, 150);
+        MouseDispose.leftClick();
+
+        /** 对列表进行通一格式调配 */
+        ParamStatic.robot.mouseWheel(wheel);
+
+        int sumPX = (sum-next) * 54;
+        for(int x = 0; x < sumPX/152; x++){
+            ParamStatic.robot.mouseWheel(1);
+            try { Thread.sleep(500); } catch (Exception e){ }
+        }
+        if(sumPX%152 > 76){ ParamStatic.robot.mouseWheel(1); }
+        System.out.println("Y轴坐标地址----" + sumPX%152 + " + 150");
     }
 
     /**
